@@ -4,7 +4,7 @@ let nextButton = document.getElementById("next");
 // onload, image should be displayed
 window.onload = function (){
 let img = document.createElement("img");
-img.setAttribute("src","./images/bonusimage1.avif");
+img.setAttribute("src","https://images.unsplash.com/photo-1682687219640-b3f11f4b7234?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 img.setAttribute("id","image");
 document.body.appendChild(img);
 }
@@ -12,17 +12,22 @@ document.body.appendChild(img);
 /// function for onclick of next button
 nextButton.addEventListener("click", () =>{
     let image = document.getElementById("image");
-    let imgarr = [ "./images/bonusimage1.avif" , "./images/bonusimage2.avif" , "./images/bonusimage3.avif" ];
+    let imgarr = 
+     [ 
+      "https://images.unsplash.com/photo-1682687219640-b3f11f4b7234?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , 
+      "https://images.unsplash.com/photo-1706463629335-d92264bbfd6f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , 
+      "https://images.unsplash.com/photo-1682695796497-31a44224d6d6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+     ];
     let value = image.src;
 
- if(value ==  "http://127.0.0.1:5500/images/bonusimage1.avif"){
+ if(value ==  imgarr[0]){
     image.setAttribute("src",imgarr[1]);
 
  }
- if(value ==  "http://127.0.0.1:5500/images/bonusimage2.avif"){
-    image.src = imgarr[2];
+ if(value ==  imgarr[1]){
+    image.src = imgarr[2];c
  }
- if(value ==  "http://127.0.0.1:5500/images/bonusimage3.avif"){
+ if(value ==  imgarr[2]){
     image.src = imgarr[0];
  } 
 })
@@ -30,16 +35,21 @@ nextButton.addEventListener("click", () =>{
 /// function for onclick of previous button
 previousButton.addEventListener("click", () =>{
     let image = document.getElementById("image");
-    let imgarr = [ "./images/bonusimage1.avif" , "./images/bonusimage2.avif" , "./images/bonusimage3.avif" ];
+    let imgarr = 
+     [ 
+      "https://images.unsplash.com/photo-1682687219640-b3f11f4b7234?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , 
+      "https://images.unsplash.com/photo-1706463629335-d92264bbfd6f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" , 
+      "https://images.unsplash.com/photo-1682695796497-31a44224d6d6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+     ];
     let value = image.src;
 
- if(value ==  "http://127.0.0.1:5500/images/bonusimage3.avif"){
+ if(value ==  imgarr[2]){
     image.src =  imgarr[1];
  }
- if(value ==  "http://127.0.0.1:5500/images/bonusimage2.avif"){
+ if(value ==  imgarr[1]){
     image.src = imgarr[0];
  }
- if(value ==  "http://127.0.0.1:5500/images/bonusimage1.avif"){
+ if(value ==  imgarr[0]){
     image.src =  imgarr[2];
  }
 })
